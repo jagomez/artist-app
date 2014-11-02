@@ -11,7 +11,9 @@ gem 'bootstrap-sass', '~> 3.2.0'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end
-
+gem 'quiet_assets'
+gem 'simple_form'
+gem 'devise'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
