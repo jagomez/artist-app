@@ -22,7 +22,7 @@
     <tr>
       <td><a href="<%= opportunity_path(opportunity.id) %>"><%= opportunity.deadline %></a></td>
       <td><%= opportunity.projectname %></td>
-      <td><%= opportunity.project_scope %></td>
+      <td><%= truncate opportunity.project_scope %></td>
       <td><%= opportunity.fee %></td>
       <td><%= opportunity.prereq %></td>
         
