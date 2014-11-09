@@ -2,6 +2,7 @@ class OpportunitiesController < ApplicationController
 	
 	def index
   		@opportunity = Opportunity.all
+  		
 	end
 	def new
 		@opportunity = Opportunity.new
@@ -9,6 +10,7 @@ class OpportunitiesController < ApplicationController
 	
 	def show
 		@opportunity = Opportunity.find_by(:id=>params[:id])
+
 	end
 
 	def create
