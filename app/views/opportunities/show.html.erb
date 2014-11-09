@@ -1,7 +1,15 @@
 
-<div class="pull-right">
 	<table class="table">
-<td><%= @opportunity.projectname %></td>
-<td><%= @opportunity.project_scope %></td>
+		<thead>
+    <tr>
+      <th class="col-md-2"><%= @opportunity.projectname %></th>
+      <th class="col-md=1">&nbsp;</th>
+      </tr>
+  </thead>
+   <tbody>
+<tr>
+<td><b>Project Scope:</b> <%= @opportunity.project_scope %></td>
+</tr>
+ </tbody>
+
 </table>
-</div>
