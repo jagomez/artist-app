@@ -12,16 +12,24 @@ class OpportunitiesController < ApplicationController
 	end
 
 	def create
-		@opportunity = current_user.opportunity.new(params[:opportunity])
-
+		@opportunity = Opportunity.new(opportunity_params)
 		if @opportunity.save
-		flash[:success] = "Opportunity created successfully"
-		redirect_to opportunity_path
+			#product = Product.create(params[:product])
+			#options = params[:product][:options].split(",")
+			#options.each do |options|
+			#Product.product_options.create(:name => option)
+			#end
+			flash[:success] = "Call for Artist successfully added."
+	    	redirect_to opportunity_path(@opportunity.id)
 		else
 		render 'new'
 		end
 	end 
 
+	private
+	def opportunity_params
+		return params.require(:opportunity).permit(:projectname, :project_scope, :deadline)	
+	end
 	
 
 end
