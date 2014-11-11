@@ -14,11 +14,7 @@ class OpportunitiesController < ApplicationController
 	def create
 		@opportunity = Opportunity.new(opportunity_params)
 		if @opportunity.save
-			#product = Product.create(params[:product])
-			#options = params[:product][:options].split(",")
-			#options.each do |options|
-			#Product.product_options.create(:name => option)
-			#end
+			
 			flash[:success] = "Call for Artist successfully added."
 	    	redirect_to opportunity_path(@opportunity.id)
 		else
