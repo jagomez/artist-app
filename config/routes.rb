@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
  
  resources :opportunities
+ resources :artist_statements
 
   devise_for :users
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141112024209) do
+ActiveRecord::Schema.define(version: 20141114033415) do
 
   create_table "applied_opps", force: true do |t|
     t.integer  "UserID"
@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(version: 20141112024209) do
   end
 
   create_table "artist_statements", force: true do |t|
-    t.integer  "UserID"
-    t.text     "Description"
-    t.text     "Statement"
+    t.integer  "user_id"
+    t.text     "description"
+    t.text     "statement"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

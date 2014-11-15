@@ -1,0 +1,15 @@
+<h1>Artist Statements</h1>
+
+<table>
+	<tr>
+	<td> Description</td>
+	<td> Statement</td>
+	</tr>
+	<% @artist_statement.each do |artist_statement| %>
+	<tr>
+		<td> <%= artist_statement.description %></td>
+		<td> <%= artist_statement.statement %></td>
+	</tr>
+	<%end%>
+
+</table>
