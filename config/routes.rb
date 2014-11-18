@@ -2,8 +2,9 @@ Rails.application.routes.draw do
  
  resources :opportunities
  resources :artist_statements
+ resources :users
 
-  devise_for :users
+ devise_for :users
 
   devise_scope :user do
    authenticated :user do
