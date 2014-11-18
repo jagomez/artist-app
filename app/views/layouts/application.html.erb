@@ -15,11 +15,8 @@
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Artist App</a>
+                <a class="navbar-brand">Artist App</a>
             </div>
 
             <!-- Top Menu Items -->
@@ -46,17 +43,15 @@
                         
                             <li>
                             <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                        </li>
+                            </li>
                     </ul>
                 </li>
             </ul>
-
-
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
 
-                        <li>
+                    <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Profile<i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
@@ -76,7 +71,7 @@
                     </li>
                     
                     <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Deadlines</a>
+                        <a href="forms.html"><i class="fa fa-fw fa-table"></i> Deadlines</a>
                     </li>
                     
                 </ul>
@@ -88,21 +83,6 @@
 
             <div class="container-fluid">
 
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Artist  <small>Possibly this goes in the view?</small>
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li class="active">
-                                <i class="fa fa-dashboard"></i> Dashboard
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- /.row -->
-
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="alert alert-info alert-dismissable">
@@ -110,26 +90,20 @@
                             <i class="fa fa-info-circle"></i>  <strong>Like SB Admin?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">SB Admin 2</a> for alerts!
                         </div>
                     </div>
-                </div>
-                <!-- /.row -->
-     
-                    <div class="col-lg-5">
-                        <div class="panel panel-default">
+                </div>     
+                    
                             
-                                    <% flash.each do |name, message| %>
+                            <% flash.each do |name, message| %>
 
-                                    <%= content_tag :div, message, class: "alert alert-#{name}" %>
+                            <%= content_tag :div, message, class: "alert alert-#{name}" %>
 
-                                    <% end %>
-                                    
-                                    <%= yield %>
-                              
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
+                            <% end %>
+                            
+                            <%= yield %>
+                                  
+                         
+                        
+
             </div>
             <!-- /.container-fluid -->
 
