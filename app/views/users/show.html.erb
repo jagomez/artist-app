@@ -1,6 +1,32 @@
-<% @user.each do |user| %>
-<h1><%=user.first_name %> <%=user.last_name %></h1>
+
+<h1><%=current_user.first_name %> <%=current_user.last_name %></h1>
 <p>profile image</p>
-<% end %>
+
+	
+
+	<div class="panel-heading">
+		<h3 class="panel-title"><i class="fa fa-arrow-circle-right"></i> Artist Statements</h3>
+	</div>
+	<div class="panel-body">
+	<div class="table-responsive">
+
+		<table>
+			<tr>
+			<td> Description</td>
+			<td> Statement</td>
+			</tr>
+			<% current_user.artist_statements.each do |artist_statement| %>
+			<tr>
+				<td> <%= artist_statement.description %></td>
+				<td> <%= artist_statement.statement %></td>
+			</tr>
+			<%end%>
+
+		</table>
+	<div class="text-right">
+		<a href="#"><i class="fa fa-arrow-circle-right"></i></a>
+	</div>
+	</div>
+
 
 
