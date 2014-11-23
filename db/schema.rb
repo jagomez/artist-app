@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20141120030122) do
   create_table "deadlines", force: true do |t|
     t.string   "name"
     t.integer  "user_id"
-    t.string   "integer"
     t.integer  "opportunity_id"
     t.string   "description"
     t.string   "date"
