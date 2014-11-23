@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :opportunities
   has_many :artist_statements
+  has_many :deadlines
 end

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
  resources :opportunities
  resources :artist_statements
-
+resources :deadlines
 
  
 
