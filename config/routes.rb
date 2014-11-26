@@ -12,9 +12,10 @@ Rails.application.routes.draw do
    end
  end
 
- resources :opportunities
- resources :artist_statements
-resources :deadlines
+  resources :opportunities
+  resources :artist_statements
+  resources :deadlines
+  resources :images
 
  
 
