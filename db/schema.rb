@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126025453) do
+ActiveRecord::Schema.define(version: 20141126030850) do
 
   create_table "applied_opps", force: true do |t|
     t.integer  "UserID"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20141126025453) do
     t.string   "size"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user"
   end
 
   create_table "opportunities", force: true do |t|
