@@ -23,7 +23,15 @@ Artist  <small>Possibly this goes in the view?</small></h1>
 			</table>
 		</div>
 </div>
-
+<div class="col-lg-5">
+	<div>
+		<% current_user.images.each do |image| %>
+		<img src ="<%= image.image =%>">
+		<p><%= image.title %></p>
+		<p><%= image.description %></p>
+		<% end %>
+	</div>
+</div>
 <div class="col-lg-5">
 	<div class="panel-heading">
 		<h3 class="panel-title"><i class="fa fa-arrow-circle-right"></i> Artist Statements</h3>
