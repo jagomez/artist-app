@@ -1,88 +1,10 @@
 
-<h1 class="page-header">
-Artist  <small>Possibly this goes in the view?</small></h1>
+<h1 class="page-header">Artist App</h1>
 
-<div class="col-lg-5">
-		<div class ="panel-heading">
-			<h3 class="panel-title"><i class = "fa fa-arrow-circle-right"></i> Deadlines</h3>
-		</div>
-		<div class="panel panel-default">
-			<table class="table table-bordered table-hover table-striped">
-				<tr>
-					<td>Due Date</td>
-					<td>Description</td>
-					<td>Status</td>
-				</tr>
-				<% current_user.deadlines.each do |deadline| %>
-				<tr>
-					<td><%= deadline.date %></td>
-					<td><%= deadline.name %></td>
-					<td><%= deadline.description %></td>
-				</tr>
-				<%end%>
-			</table>
-		</div>
-</div>
-<div class="col-lg-5">
-	<div>
-		<% current_user.images.each do |image| %>
-		<img src ="<%= image.image =%>">
-		<p><%= image.title %></p>
-		<p><%= image.description %></p>
-		<% end %>
-	</div>
-</div>
-<div class="col-lg-5">
-	<div class="panel-heading">
-		<h3 class="panel-title"><i class="fa fa-arrow-circle-right"></i> Artist Statements</h3>
-	</div>
-	<div class="panel panel-default">
-		<table class="table table-bordered table-hover table-striped">
-			<tr>
-			<td> Description</td>
-			<td> Statement</td>
-			</tr>
-			<% current_user.artist_statements.each do |artist_statement| %>
-			<tr>
-				<td> <%= artist_statement.description %></td>
-				<td> <%= artist_statement.statement %></td>
-			</tr>
-			<%end%>
+<%= render "due_date" %>
+<%= render "images" %>
+<%= render "artist_statements" %>  
+<%= render "opportunities" %>  
 
-		</table>
-	</div>
-	<div class="text-right">
-			<a href="#"><i class="fa fa-arrow-circle-right"></i></a>
-	</div>
-</div>
-<div class="col-lg-5">
-	<div class="panel-heading">
-		<h3 class="panel-title"><i class="fa fa-arrow-circle-right"></i>Open Call for Artists</h3>
-	</div>
-	<div class="panel panel-default">
-		<table class="table table-bordered table-hover table-striped">
-		<tr>
-		<th>DueDate</th>
-		<th>Project Name</th>
-		<th>Project Scope</th>
-		<th>Fee</th>
-		<th>Prerequisite</th>
-
-		</tr>
-		<% current_user.opportunities.each do |opportunity| %>
-		<tr>
-		<td><a href="<%= opportunity_path(opportunity.id) %>"><%= opportunity.deadline %></a></td>
-		<td><a href="<%= opportunity.url %>" target="_blank"><%= opportunity.projectname %></a></td>
-		<td><%= truncate opportunity.project_scope %></td>
-		<td><%= opportunity.fee %></td>
-		<td><%= opportunity.prereq %></td>
-
-		</tr>
-		<% end %>
-		</table>
-	<div class="text-right">
-		<a href="<%= new_opportunity_path %>">Add a new Opportunity <i class="fa fa-arrow-circle-right"></i></a>
-	</div>
-</div>
 	
 

@@ -1,0 +1,9 @@
+<div class="col-lg-5">
+	<div>
+		<% current_user.images.each do |image| %>
+		<img src ="<%= image.image =%>">
+		<p><%= image.title %></p>
+		<p><%= image.description %></p>
+		<% end %>
+	</div>
+</div>

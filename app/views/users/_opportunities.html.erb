@@ -1,0 +1,29 @@
+<div class="col-lg-5">
+	<div class="panel-heading">
+		<h3 class="panel-title"><i class="fa fa-arrow-circle-right"></i>Open Call for Artists</h3>
+	</div>
+	<div class="panel panel-default">
+		<table class="table table-bordered table-hover table-striped">
+		<tr>
+		<th>DueDate</th>
+		<th>Project Name</th>
+		<th>Project Scope</th>
+		<th>Fee</th>
+		<th>Prerequisite</th>
+
+		</tr>
+		<% current_user.opportunities.each do |opportunity| %>
+		<tr>
+		<td><a href="<%= opportunity_path(opportunity.id) %>"><%= opportunity.deadline %></a></td>
+		<td><a href="<%= opportunity.url %>" target="_blank"><%= opportunity.projectname %></a></td>
+		<td><%= truncate opportunity.project_scope %></td>
+		<td><%= opportunity.fee %></td>
+		<td><%= opportunity.prereq %></td>
+
+		</tr>
+		<% end %>
+		</table>
+	<div class="text-right">
+		<a href="<%= new_opportunity_path %>">Add a new Opportunity <i class="fa fa-arrow-circle-right"></i></a>
+	</div>
+</div>
