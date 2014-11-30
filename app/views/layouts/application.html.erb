@@ -6,10 +6,10 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-    <div id="wrapper">
+<body class="<%= current_user ? '' : 'signed-out-body' %>">
+    <% if current_user %>
+        <div id="wrapper">
 
-        <% if current_user %>
             <!-- Navigation -->
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -79,35 +79,52 @@
                 </div>
                 <!-- /.navbar-collapse -->
             </nav>
-        <% end %>
 
-        <div id="page-wrapper">
+            <div id="page-wrapper">
 
-            <div class="container-fluid">
+                <div class="container-fluid">  
+                                
+                    <% flash.each do |name, message| %>
 
-                   
+                    <%= content_tag :div, message, class: "alert alert-#{name}" %>
+
+                    <% end %>
                     
-                            
-                            <% flash.each do |name, message| %>
+                    <%= yield %>     
+                             
+                </div>            
 
-                            <%= content_tag :div, message, class: "alert alert-#{name}" %>
+              
+                <!-- /.container-fluid -->
 
-                            <% end %>
-                            
-                            <%= yield %>
-                                  
-                         
-            </div>            
-
+            </div>
+            <!-- /#page-wrapper -->
           
-            <!-- /.container-fluid -->
-
         </div>
-        <!-- /#page-wrapper -->
-      
-    </div>
-    <!-- /#wrapper -->
+        <!-- /#wrapper -->
 
+        <% else %>
+            <div id="signed-out-wrapper">
+            <!-- <div id="page-wrapper"> -->
+
+                <!-- <div class="container-fluid">   -->
+                                
+                    <% flash.each do |name, message| %>
+
+                    <%= content_tag :div, message, class: "alert alert-#{name}" %>
+
+                    <% end %>
+                    
+                    <%= yield %>     
+                             
+                <!-- </div>             -->
+
+              
+                <!-- /.container-fluid -->
+
+            <!-- </div> -->
+        </div>
+        <% end %>
 
   
 
