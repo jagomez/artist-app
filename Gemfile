@@ -10,7 +10,7 @@ gem 'sass-rails', '~> 4.0.3'
 
 gem 'carrierwave'
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0'
+gem 'rspec-rails', '~> 3.0.0'
 end
 gem 'quiet_assets'
 gem 'simple_form'

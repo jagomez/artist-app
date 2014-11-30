@@ -9,75 +9,77 @@
 <body>
     <div id="wrapper">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                </button>
-                <a class="navbar-brand">Artist App</a>
-            </div>
+        <% if current_user %>
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+                    <a class="navbar-brand">Artist App</a>
+                </div>
 
-            <!-- Top Menu Items -->
-            <ul class="nav navbar-left top-nav">
-               
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu alert-dropdown">
-                        <li>
-                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">View All</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <li>
-                            <%=current_user.first_name %> <%=current_user.last_name %>
-                        </li<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        
+                <!-- Top Menu Items -->
+                <ul class="nav navbar-left top-nav">
+                   
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                        <ul class="dropdown-menu alert-dropdown">
                             <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                                <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
                             </li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Profile<i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
+                            <li class="divider"></li>
                             <li>
-                                <a href="#">Resume</a>
-                            </li>
-                            <li>
-                                <a href="#">Artist Statements</a>
-                            </li>
-                            <li>
-                                <a href="#">Portfolio</a>
+                                <a href="#">View All</a>
                             </li>
                         </ul>
                     </li>
-                    
-                    <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Opportunities</a>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <li>
+                                <%=current_user.first_name %> <%=current_user.last_name %>
+                            </li<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+                                <li>
+                                <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                                </li>
+                        </ul>
                     </li>
-                    
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-table"></i> Deadlines</a>
-                    </li>
-                    
                 </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </nav>
+                <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav side-nav">
+
+                        <li>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Profile<i class="fa fa-fw fa-caret-down"></i></a>
+                            <ul id="demo" class="collapse">
+                                <li>
+                                    <a href="#">Resume</a>
+                                </li>
+                                <li>
+                                    <a href="#">Artist Statements</a>
+                                </li>
+                                <li>
+                                    <a href="#">Portfolio</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <a href="tables.html"><i class="fa fa-fw fa-table"></i> Opportunities</a>
+                        </li>
+                        
+                        <li>
+                            <a href="forms.html"><i class="fa fa-fw fa-table"></i> Deadlines</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        <% end %>
 
         <div id="page-wrapper">
 
