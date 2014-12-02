@@ -11,8 +11,8 @@
 		<th>Fee</th>
 		<th>Prerequisite</th>
 
-		</tr>
 		<% current_user.opportunities.each do |opportunity| %>
+		</tr>
 		<tr>
 		<td><a href="<%= opportunity_path(opportunity.id) %>"><%= opportunity.deadline %></a></td>
 		<td><a href="<%= opportunity.url %>" target="_blank"><%= opportunity.projectname %></a></td>

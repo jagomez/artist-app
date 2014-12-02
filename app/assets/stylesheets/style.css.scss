@@ -1,14 +1,19 @@
 body {
-    background-color:  #8C001A;
+    background-color:  #00BAC8;
 }
 
 body.signed-out-body {
+    background-image: url("pastels_lores.jpg");
     background-color:  #ffffff;
-    // background-image: url("pastels_lores.jpg");
+}
+.sign-in {
+    width: auto;
+    margin-top: 100px;
+    background-color: #ffffff;
 }
 
 #page-wrapper {
-	background-color: #8C001A;
+	background-color: #00BAC8;
 	
 }
 @media(min-width:500px) {
@@ -37,7 +42,7 @@ body.signed-out-body {
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: #8C001A;
+        background-color: #00BAC8;
     }
 
     .side-nav>li>a {
@@ -63,5 +68,5 @@ body.signed-out-body {
 }
 
 .side-nav>li>ul>li>a:hover {
-    color: #8C001A;
+    color: #00BAC8;
 }
