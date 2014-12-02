@@ -1,5 +1,6 @@
 body {
-    background-color:  #00BAC8;
+    margin-top: 100px;
+    background-color: #ffffff;
 }
 
 body.signed-out-body {
@@ -12,10 +13,7 @@ body.signed-out-body {
     background-color: #ffffff;
 }
 
-#page-wrapper {
-	background-color: #00BAC8;
-	
-}
+
 @media(min-width:500px) {
     body {
         margin-top: 0px;
@@ -30,29 +28,43 @@ body.signed-out-body {
         padding: 10px;
     }
 }
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #ffffff;
+}
 
+/* Side Navigation */
 
-@media(min-width:500px) {
+@media(min-width:768px) {
     .side-nav {
         position: fixed;
-        top: 51px; //moves the text within the nav box
-        left: 175px;
-        width: 150px;
-        margin-left: -150px;
+        top: 51px;
+        left: 225px;
+        width: 225px;
+        margin-left: -225px;
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: #00BAC8;
+        background-color: #00bac8;
     }
+    .navbar-nav>li>a {
+        color: #ffffff;
+    }
+   .side-nav>ul {
+        color: #ffffff;
+   }
 
     .side-nav>li>a {
         width: 225px;
+        color: #ffffff;
     }
 
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
-        background-color: #000 !important;
+        background-color: #00bac8 !important;
     }
 }
 
@@ -60,13 +72,15 @@ body.signed-out-body {
     padding: 0;
 }
 
+
+
 .side-nav>li>ul>li>a {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
-    color: #999;
+    color: #ffffff ;
 }
 
 .side-nav>li>ul>li>a:hover {
-    color: #00BAC8;
+    color: #fff;
 }

@@ -1,16 +1,16 @@
 <div class="col-lg-5">
 		
-		<div class="panel panel-default">
+		<!-- <div class="panel panel-default"> -->
 			<table class="table">
 				<tr>
-					<td colspan="3" class = "panel-title"><i class = "fa fa-arrow-circle-right"> Deadlines</td>
+					<td colspan="3" class="panel-title"><i class = "fa fa-arrow-circle-right"> Need to do</td>
 				</tr>
 				<tr>
-					<td>Due Date</td>
-					<td>Description</td>
-					<td>Status</td>
+					<th>Due Date</th>
+					<th>Description</th>
+					<th>Status</th>
 				</tr>
-				<% current_user.deadlines.each do |deadline| %>
+				<% opportunity.deadlines.each do |deadline| %>
 				<tr>
 					<td><%= deadline.date %></td>
 					<td><%= deadline.name %></td>
@@ -18,5 +18,5 @@
 				</tr>
 				<%end%>
 			</table>
-		</div>
+		<!-- </div> -->
 </div>
