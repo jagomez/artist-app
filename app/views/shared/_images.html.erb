@@ -1,9 +1,8 @@
-<div class="col-lg-5">
-	<div>
+
+	<div class = "image-container">
 		<% current_user.images.each do |image| %>
 		<img src ="<%= image.image =%>">
 		<p><%= image.title %></p>
 		<p><%= image.description %></p>
 		<% end %>
 	</div>
-</div>

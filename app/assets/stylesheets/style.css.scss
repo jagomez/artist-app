@@ -84,3 +84,19 @@ body.signed-out-body {
 .side-nav>li>ul>li>a:hover {
     color: #fff;
 }
+.image-container {
+    width: 150px;
+    height: 200px;
+    background-color: #BFEFFF;
+    padding: 5px;
+   border-radius: 10px;
+   box-shadow: 2px 2px 3px #888888;
+}
+.image-container img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
