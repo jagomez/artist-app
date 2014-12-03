@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :artist_statements
   resources :deadlines
   resources :images
+  resources :portfolios
 
  
 
