@@ -9,10 +9,12 @@
 <% current_user.educations.each do |education| %>
 	<h3>Education: <%= education.school %></h2>
 	<%end%>
+
 	<% current_user.experiences.each do | experience | %>
-	<h3>Shows:
+	<h3>Shows:</h3>
 	<ul>
-		<li><% experience.show %></li>
+		<li><%= experience.title %>, <%= experience.year %></li>
+		
 		<%end%>
 	</ul>
 </div>
