@@ -5,8 +5,16 @@
 	<li><%= current_user.first_name %> <%= current_user.last_name %></li>
 	<li>website: <%= current_user.website %></li>
 	<li>twitter: <%= current_user.twitter %></li>
-	<li>address: <%= current_user.address %>, <%current_user.city %> <%current_user.state %></li>
 </ul>
+<% current_user.educations.each do |education| %>
+	<h3>Education: <%= education.school %></h2>
+	<%end%>
+	<% current_user.experiences.each do | experience | %>
+	<h3>Shows:
+	<ul>
+		<li><% experience.show %></li>
+		<%end%>
+	</ul>
 </div>
 
 <div>

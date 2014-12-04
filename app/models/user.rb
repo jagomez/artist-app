@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
   has_many :artist_statements
   has_many :deadlines
   has_many :images
+  has_many :educations
+  has_many :experiences
 end
