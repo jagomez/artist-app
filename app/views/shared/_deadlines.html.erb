@@ -1,0 +1,22 @@
+<div class="col-lg-5">
+		
+		<!-- <div class="panel panel-default"> -->
+			<table class="table">
+				<tr>
+					<td colspan="3" class="panel-title"><i class = "fa fa-arrow-circle-right"> Need to do</td>
+				</tr>
+				<tr>
+					<th>Due Date</th>
+					<th>Description</th>
+					<th>Status</th>
+				</tr>
+				<% opportunity.deadlines.each do |deadline| %>
+				<tr>
+					<td><%= deadline.date %></td>
+					<td><%= deadline.name %></td>
+					<td><%= deadline.description %></td>
+				</tr>
+				<%end%>
+			</table>
+		<!-- </div> -->
+</div>
