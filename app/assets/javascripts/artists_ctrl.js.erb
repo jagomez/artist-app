@@ -26,6 +26,20 @@
 			$scope.newExperienceCategory = "";
 			
 		}; 
+		$scope.addEducations= function(school, year, degree) {
+		var newEducation= { school: school, year: year, degree: degree, user_id: $scope.currentUserID };
+		$http.post('/api/v1/educations.json', {education: newEducation}).then(function(response) {
+		}, function (error) {
+		$scope.error = error.statusText;
+		});
+			$scope.user.educations.push(newEducation);
+			$scope.newEducationSchool = "";
+			$scope.newEducationYear = "";
+			$scope.newEducationDegree = "";
+			
+		}; 
+
+
 		window.scope = $scope;
 
 	});

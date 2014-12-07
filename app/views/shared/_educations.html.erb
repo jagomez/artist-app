@@ -1,1 +1,20 @@
-_educations.html.erb
+<div ng-app="app">
+<div ng-controller="artistsCtrl">
+		<div ng-init="getUserInfo(<%= current_user.id %>) "></div>
+		{{ 1 + 1 }}
+		<h3>Education:</h3>
+		<ul class="unstyled">
+			<li ng-repeat="education in user.educations">
+				{{ education.school }}, {{ education.year}}, {{education.degree}}
+			</li>
+		</ul>
+
+		<label>School</label>
+		<input ng-model="newExperienceTitle">
+		<label>Year</label>
+		<input ng-model="newExperienceYear">
+		<label>Category</label>
+		<input ng-model="newExperienceCategory">
+		<button ng-click="addExperience(newExperienceTitle, newExperienceYear, newExperienceCategory)">Add Show</button>
+	</div>
+</div>
