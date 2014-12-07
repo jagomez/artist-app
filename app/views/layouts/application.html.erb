@@ -102,7 +102,9 @@
         <!-- /#wrapper -->
 
         <% else %>
-            <div id="signed-out-wrapper" ng-init="currentUserID = <%= current_user.id %>; ">
+        <div ng-app="app">
+
+            <div id="signed-out-wrapper" >
             <!-- <div id="page-wrapper"> -->
 
                 <!-- <div class="container-fluid">   -->
@@ -122,6 +124,7 @@
 
             <!-- </div> -->
         </div>
+    </div>
         <% end %>
 
   

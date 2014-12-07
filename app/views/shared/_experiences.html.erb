@@ -1,0 +1,20 @@
+<div ng-app="app">
+<div ng-controller="artistsCtrl">
+		<div ng-init="getUserInfo(<%= current_user.id %>) "></div>
+		{{ 1 + 1 }}
+		<h3>Shows:</h3>
+		<ul class="unstyled">
+			<li ng-repeat="experience in user.experiences">
+				{{ experience.title }}, {{ experience.year }}
+			</li>
+		</ul>
+
+		<label>Show Title:</label>
+		<input ng-model="newExperienceTitle">
+		<label>Year</label>
+		<input ng-model="newExperienceYear">
+		<label>Category</label>
+		<input ng-model="newExperienceCategory">
+		<button ng-click="addExperience(newExperienceTitle, newExperienceYear, newExperienceCategory)">Add Show</button>
+	</div>
+</div>

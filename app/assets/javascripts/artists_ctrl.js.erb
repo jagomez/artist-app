@@ -1,0 +1,32 @@
+(function(){
+	"use strict";
+	angular.module("app").controller("artistsCtrl", function($scope, $http){
+		
+		$scope.getUserInfo = function(userId) {
+			$scope.currentUserID = userId;
+			$http.get("/api/v1/users/" + $scope.currentUserID + ".json").then(function (response) {
+				$scope.user = response.data;
+			});
+		};		
+
+		$scope.changeOrder = function(attribute) {
+		$scope.orderAttribute = attribute;
+		$scope.sortDirection = !$scope.sortDirection;
+		};
+
+		$scope.addExperience= function(title, year, category) {
+		var newExperience = { title: title, year: year, category: category, user_id: $scope.currentUserID };
+		$http.post('/api/v1/experiences.json', {experience: newExperience}).then(function(response) {
+		}, function (error) {
+		$scope.error = error.statusText;
+		});
+			$scope.user.experiences.push(newExperience);
+			$scope.newExperienceTitle = "";
+			$scope.newExperienceYear = "";
+			$scope.newExperienceCategory = "";
+			
+		}; 
+		window.scope = $scope;
+
+	});
+}());

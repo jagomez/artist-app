@@ -12,6 +12,7 @@ json.educations user.educations.each do |education|
 	json.school education.school
 	json.year education.year
 end
+
 json.experiences user.experiences.each do |experience|
 	json.title experience.title
 	json.year experience.year
