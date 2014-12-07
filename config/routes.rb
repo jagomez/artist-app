@@ -18,6 +18,13 @@ Rails.application.routes.draw do
   resources :images
   resources :portfolios
   resources :resumes
+  resources :users
+
+  namespace :api do
+    namespace :v1 do
+      resources :users
+    end
+  end
 
  
 

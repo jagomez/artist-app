@@ -14,6 +14,7 @@ body.signed-out-body {
 }
 
 .page-container {
+    float: left;
     margin-top: 50px;
  }
 @media(min-width:500px) {
@@ -73,9 +74,6 @@ body.signed-out-body {
 .side-nav>li>ul {
     padding: 0;
 }
-
-
-
 .side-nav>li>ul>li>a {
     display: block;
     padding: 10px 15px 10px 38px;

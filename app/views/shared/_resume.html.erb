@@ -1,6 +1,6 @@
+<div class="resume">
 <div class="col-lg-5">
 	<div>
-	<h1>Profile</h1>
 	<ul class="unstyled">
 	<li><%= current_user.first_name %> <%= current_user.last_name %></li>
 	<li>website: <%= current_user.website %></li>
@@ -12,7 +12,7 @@
 
 	<% current_user.experiences.each do | experience | %>
 	<h3>Shows:</h3>
-	<ul>
+	<ul class="unstyled">
 		<li><%= experience.title %>, <%= experience.year %></li>
 		
 		<%end%>
@@ -20,3 +20,4 @@
 </div>
 
 <div>
+</div>

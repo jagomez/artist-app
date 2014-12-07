@@ -12,9 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require angular
+//= require app
 //= require bootstrap.min
 //= require raphael.min
 //= require morris.min
 //= require morris-data
-//= require turbolinks
 //= require_tree .

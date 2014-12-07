@@ -73,8 +73,6 @@
                         <li>
                             <a href="/opportunities/show"><i class="fa fa-fw fa-table"></i> Open Call for Artists</a>
                         </li>
-                       
-                        
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -104,7 +102,7 @@
         <!-- /#wrapper -->
 
         <% else %>
-            <div id="signed-out-wrapper">
+            <div id="signed-out-wrapper" ng-init="currentUserID = <%= current_user.id %>; ">
             <!-- <div id="page-wrapper"> -->
 
                 <!-- <div class="container-fluid">   -->

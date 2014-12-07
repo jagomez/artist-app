@@ -124,6 +124,7 @@ ul.alert-dropdown {
         overflow-y: auto;
         background-color: #222;
     }
+}
 
     .side-nav>li>a {
         width: 225px;
@@ -134,7 +135,6 @@ ul.alert-dropdown {
         outline: none;
         background-color: #000 !important;
     }
-}
 
 .side-nav>li>ul {
     padding: 0;
