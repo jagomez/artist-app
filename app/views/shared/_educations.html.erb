@@ -1,7 +1,7 @@
 <div ng-app="app">
 <div ng-controller="artistsCtrl">
 		<div ng-init="getUserInfo(<%= current_user.id %>) "></div>
-		{{ 1 + 1 }}
+		<!-- {{ 1 + 1 }} -->
 		<h3>Education:</h3>
 		<ul class="unstyled">
 			<li ng-repeat="education in user.educations">
@@ -10,11 +10,11 @@
 		</ul>
 
 		<label>School</label>
-		<input ng-model="newExperienceTitle">
+		<input ng-model="newEducationSchool">
 		<label>Year</label>
-		<input ng-model="newExperienceYear">
-		<label>Category</label>
-		<input ng-model="newExperienceCategory">
-		<button ng-click="addExperience(newExperienceTitle, newExperienceYear, newExperienceCategory)">Add Show</button>
+		<input ng-model="newEducationYear">
+		<label>Degree</label>
+		<input ng-model="newEducationDegree">
+		<button ng-click="addEducation(newEducationSchool, newEducationYear, newEducationDegree)">Add a degree</button>
 	</div>
 </div>
