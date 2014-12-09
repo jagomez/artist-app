@@ -1,34 +1,26 @@
+<div ng-app="app">
+<div ng-controller="artistsCtrl">
 <div class="col-lg-5">
-	<div class="panel-heading">
+	<div ng-init="getUserInfo(<%= current_user.id %>)" ></div>
+		<div class="panel-heading">
 		<h2 class="panel-title"><i class="fa fa-arrow-circle-right"></i>Opportunities to Apply for</h2>
-	</div>
-		<% current_user.opportunities.each do |opportunity| %>
-			<div class="panel panel-default">
-				<table class="table table-bordered table-hover table-striped">
-					<tr>
-					<!-- <th>DueDate</th>
-					<th>Project Name</th>
-					<th>Project Scope</th>
-					<th>Fee</th>
-					<th>Prerequisite</th>
+		</div>
+			<div ng_controller="artistsCtrl">
+				<table class="table" ng-repeat="opportunity in user.opportunities">
+			<tr >
+				<td class="panel-title" > </td>
+			</tr >
+			<tr>
+				<td>{{opportunity.deadline}}</td>
+				<td>{{opportunity.projectname}}</td>
+				<td>{{opportunity.fee}}</td>
+				<td>{{opportunity.prereq}}</td>
 
-					</tr> -->
-					<tr>
-					<td><a href="<%= opportunity_path(opportunity.id) %>"><%= opportunity.deadline %></a></td>
-					<td><%= opportunity.projectname %><br>
-						<i class="fa fa-arrow-circle-right"><a href="<%= opportunity.url %>" target="_blank"> url to original post</a></td>
-					<td><%= truncate opportunity.project_scope %></td>
-					<td>$ <%= opportunity.fee %></td>
-					<td><%= opportunity.prereq %></td>
+			</tr>
+			
+			</table>
 
-					</tr>
-				</table>
-
-				<%= render "shared/deadlines", opportunity: opportunity %>
-				
 			</div>
-		<% end %>
-	<div class="text-right">
-		<a href="<%= new_opportunity_path %>">Add a new Opportunity <i class="fa fa-arrow-circle-right"></i></a>
-	</div>
 </div>
+
+	

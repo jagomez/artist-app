@@ -38,6 +38,26 @@
 			$scope.newEducationDegree = "";
 			
 		}; 
+		$scope.getOpportunityInfo = function(opportunityId) {
+			$scope.currentUserID = userId;
+			$scope.currentOpportunityID = opportunityId;
+			$http.get("/api/v1/users/" + $scope.opportunityId + ".json").then(function (response) {
+				$scope.user = response.data;
+			});
+		};		
+
+			$scope.addDeadline= function(name, description, date, status) {
+		var newDeadline= { name: name, description: description, date: date, status: status, user_id: $scope.currentUserID, opportunity_id: $scope.currentOpportunityID };
+		$http.post('/api/v1/deadlines.json', {deadline: newDeadline}).then(function(response) {
+		}, function (error) {
+		$scope.error = error.statusText;
+		});
+			$scope.user.deadlines.push(newEducation);
+			$scope.newDeadlineName = "";
+			$scope.newDeadlineDescription = "";
+			$scope.newDeadlineDate = "";
+			
+		}; 
 
 
 		window.scope = $scope;

@@ -25,6 +25,11 @@ Rails.application.routes.draw do
       resources :users
       resources :experiences
       resources :educations
+      resources :deadlines
+      resources :opportunities
+      resources :images
+      resources :portfolios
+      resources :resumes
     end
   end
 
