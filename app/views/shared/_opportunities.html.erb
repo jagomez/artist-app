@@ -5,13 +5,13 @@
 		<div class="panel-heading">
 		<h2 class="panel-title"><i class="fa fa-arrow-circle-right"></i>Opportunities to Apply for</h2>
 		</div>
-			<div ng-repeat="opportunity in user.opportunities" >
-				<table class="table" >
+			<div class="panel panel-default" ng-repeat="opportunity in user.opportunities" >
+				<table class="table table-bordered table-hover table-striped" >
 			<tr >
-				<td class="panel-title" > Deadline</td>
+				<td> Deadline</td>
 				<td> Title</td>
 				<td>Fee</td>
-				<td>
+				
 			</tr >
 			<tr >
 				<td>{{opportunity.deadline}}</td>
@@ -20,10 +20,19 @@
 			</tr>
 			
 			</table>
-			<table class ="table">
+			<div ng-repeat="deadline in opportunity.deadlines" >
+
+			<table class ="table" >
 				<tr>
-					<td ng-repeat="deadline in opportunity.deadlines">{{ deadline.name }}</td>
+					<td colspan="2" class="panel-title"><i class = "fa fa-arrow-circle-right"> Need to do</td>
 				</tr>
+				
+				<tr>
+					<td>{{ deadline.name }}</td>
+					<td>{{ deadline.date }}</td>
+				</tr>
+			</table>
+			</div>
 			</div>
 </div>
 

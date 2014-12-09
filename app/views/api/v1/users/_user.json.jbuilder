@@ -46,5 +46,6 @@ json.opportunities user.opportunities.each do |opportunity|
 	json.url opportunity.url
 	json.deadlines opportunity.deadlines.each do |deadline|
 		json.name deadline.name
+		json.date deadline.date
 	end
 end
