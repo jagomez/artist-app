@@ -30,6 +30,8 @@ json.statements user.artist_statements.each do |statement|
 	json.description statement.description
 	json.statement statement.statement
 end
+
+
 json.opportunities user.opportunities.each do |opportunity|
 	json.opportunity opportunity.projectname
 	json.project_scope opportunity.project_scope
@@ -42,4 +44,7 @@ json.opportunities user.opportunities.each do |opportunity|
 	json.entity_phone opportunity.entity_phone
 	json.entity_email opportunity.entity_email
 	json.url opportunity.url
+	json.deadlines opportunity.deadlines.each do |deadline|
+		json.name deadline.name
+	end
 end

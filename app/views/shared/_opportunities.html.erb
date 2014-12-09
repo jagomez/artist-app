@@ -5,16 +5,18 @@
 		<div class="panel-heading">
 		<h2 class="panel-title"><i class="fa fa-arrow-circle-right"></i>Opportunities to Apply for</h2>
 		</div>
-			<div ng_controller="artistsCtrl">
-				<table class="table" ng-repeat="opportunity in user.opportunities">
-			<tr >
+			<div >
+				<table class="table">
+			<!-- <tr >
 				<td class="panel-title" > </td>
-			</tr >
-			<tr>
+			</tr > -->
+			<tr ng-repeat="opportunity in user.opportunities">
 				<td>{{opportunity.deadline}}</td>
-				<td>{{opportunity.projectname}}</td>
+				<td>{{opportunity.opportunity}}</td>
 				<td>{{opportunity.fee}}</td>
 				<td>{{opportunity.prereq}}</td>
+				<td ng-repeat="deadline in opportunity.deadlines">{{ deadline.name }}</td>
+	
 
 			</tr>
 			
