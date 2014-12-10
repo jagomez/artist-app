@@ -1,8 +1,17 @@
-
-	<div class = "image-container">
-		<% current_user.images.each do |image| %>
-		<img src ="<%= image.image =%>">
-		<p><%= image.title %></p>
-		<p><%= image.description %></p>
-		<% end %>
+<div ng-app="app">
+<div ng-controller="artistsCtrl">
+		<div ng-init="getUserInfo(<%= current_user.id %>)" ></div>
+	<div class = "image-container" ng-repeat="image in user.images" > 
+		
+		<img src ="{{ image.image}}">
+		<div class="image-info">
+			<p>{{ image.title }} </p>
+			<p>{{image.description }}</p>
+			<p>{{image.year}}, {{image.size }}, {{image.medium}}</p>
+		</div>
 	</div>
+	<div >
+		<h3>Add an image</h3>
+	</div>
+</div>
+</div>

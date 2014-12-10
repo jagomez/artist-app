@@ -38,13 +38,19 @@
 			$scope.newEducationDegree = "";
 			
 		}; 
-		$scope.getOpportunityInfo = function(opportunityId) {
-			$scope.currentUserID = userId;
-			$scope.currentOpportunityID = opportunityId;
-			$http.get("/api/v1/users/" + $scope.opportunityId + ".json").then(function (response) {
-				$scope.user = response.data;
-			});
-		};		
+		$scope.addImage= function(image, title, medium, year, description, size) {
+		var newEducation= { image: image, title: title, medium: medium, year: year, description: description, size: size, user_id: $scope.currentUserID };
+		$http.post('/api/v1/images.json', {education: newEducation}).then(function(response) {
+		}, function (error) {
+		$scope.error = error.statusText;
+		});
+			$scope.user.educations.push(newEducation);
+			$scope.newEducationSchool = "";
+			$scope.newEducationYear = "";
+			$scope.newEducationDegree = "";
+			
+		}; 
+			
 
 			$scope.addDeadline= function(name, description, date, status) {
 		var newDeadline= { name: name, description: description, date: date, status: status, user_id: $scope.currentUserID, opportunity_id: $scope.currentOpportunityID };

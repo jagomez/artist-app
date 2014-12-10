@@ -4,22 +4,17 @@
 		<!-- {{ 1 + 1 }} -->
 		<table class="table">
 			<tr>
-				<td class="panel-title" ng-repeat="deadline in user.deadlines" ><i class = "fa fa-arrow-circle-right"> Need to do</td>
+				<td class="panel-title" ng-repeat="opportunity in user.opportunities" ><i class = "fa fa-arrow-circle-right"> Need to do</td>
 			</tr> 
 			<tr>
-			<td >{{ deadline.name }}</td>
-			<td>{{ deadline.description }}</td>
-			<td>{{ deadline.date}}</td>
+				<td >{{ deadline.name }}</td>
+				<td>{{ deadline.description }}</td>
+				<td>{{ deadline.date}}</td>
 			</tr>
+		
 		</table>
 
-		<label>Deadline:</label>
-		<input ng-model="newDeadlineName">
-		<label>Year</label>
-		<input ng-model="newExperienceYear">
-		<label>Category</label>
-		<input ng-model="newExperienceCategory">
-		<button ng-click="addExperience(newExperienceTitle, newExperienceYear, newExperienceCategory)">Add Show</button>
+		
 	</div>
 </div>
 
