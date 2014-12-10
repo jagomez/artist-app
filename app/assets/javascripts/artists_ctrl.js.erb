@@ -38,21 +38,21 @@
 			$scope.newEducationDegree = "";
 			
 		}; 
-		$scope.addImage= function(image, description, size, medium, title, year) {
-		var newImage = { image: image, title: title, medium: medium, year: year, description: description, size: size, user_id: $scope.currentUserID };
-		$http.post('/api/v1/images.json', {image: newImage}).then(function(response) {
-			$scope.user.images.push(newImage);
-			$scope.newImageImage = "";
-			$scope.newImageTitle= "";
-			$scope.newImageMedium = "";
-			$scope.newImageYear = "";
-			$scope.newImageDescription = "";
-			$scope.newImageSize = "";
-		}, function (error) {
-		$scope.error = error.statusText;
-		});
+		// $scope.addImage= function(image, description, size, medium, title, year) {
+		// var newImage = { image: image, title: title, medium: medium, year: year, description: description, size: size, user_id: $scope.currentUserID };
+		// $http.post('/api/v1/images.json', {image: newImage}).then(function(response) {
+		// 	$scope.user.images.push(newImage);
+		// 	$scope.newImageImage = "";
+		// 	$scope.newImageTitle= "";
+		// 	$scope.newImageMedium = "";
+		// 	$scope.newImageYear = "";
+		// 	$scope.newImageDescription = "";
+		// 	$scope.newImageSize = "";
+		// }, function (error) {
+		// $scope.error = error.statusText;
+		// });
 			
-		}; 
+		// }; 
 			
 
 			$scope.addDeadline= function(name, description, date, status) {
