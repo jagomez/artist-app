@@ -67,6 +67,18 @@
 			$scope.newDeadlineDate = "";
 			
 		}; 
+		$scope.addStatement= function(description, statement) {
+		var newStatement= { description: description, statement: statement, user_id: $scope.currentUserID};
+		$http.post('/api/v1/statments.json', {statement: newStatement}).then(function(response) {
+		}, function (error) {
+		$scope.error = error.statusText;
+		});
+			$scope.user.statements.push(newStatement);
+			$scope.newStatementDescription = "";
+			$scope.newStatementStatement = "";
+			
+		}; 
+
 
 
 		window.scope = $scope;

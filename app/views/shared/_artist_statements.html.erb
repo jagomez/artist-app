@@ -1,20 +1,29 @@
 <div class="col-lg-5">
-	<div class="panel-heading">
-		<h3 class="panel-title"><i class="fa fa-arrow-circle-right"></i> Artist Statements</h3>
-	</div>
-	<div class="panel panel-default">
-		<table class="table table-bordered table-hover table-striped">
-			<tr>
-			<td> Description</td>
-			<td> Statement</td>
-			</tr>
-			<% current_user.artist_statements.each do |artist_statement| %>
-			<tr>
-				<td> <%= artist_statement.description %></td>
-				<td> <%= artist_statement.statement %></td>
-			</tr>
-			<%end%>
+	<div ng-app="app">
+		<div ng-controller="artistsCtrl" >
 
-		</table>
+			<div ng-init="getUserInfo(<%= current_user.id %>)" ></div>
+		
+
+			<div class="panel-heading">
+				<h3 class="panel-title"><i class="fa fa-arrow-circle-right"></i> Artist Statements</h3>
+			</div>
+			<div class="panel panel-default">
+				<table class="table table-bordered table-hover table-striped" ng-repeat="statement in user.statements">
+					<tr>
+					<td> Description</td>
+					<td> Statement</td>
+					</tr>
+					
+					<tr>
+						<td> {{statement.description}}</td>
+						<td> {{statement.statement}}<td>
+					</tr>
+					
+
+				</table>
+
+			</div>
+		</div>
 	</div>
 </div>
