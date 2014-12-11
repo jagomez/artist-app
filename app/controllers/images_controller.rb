@@ -1,9 +1,10 @@
 class ImagesController < ApplicationController
 	def index
-  		@image = Image.all
+  		@images = Image.all
+  		@image = Image.new
 	end
 	def new
-		@image= Image.new
+		
 	end
 	def create
 		@image = Image.new(image_params)
