@@ -125,7 +125,7 @@ body.signed-out-body {
 //     background-color: #BFEFFF;
 // }
 .resume {
-    width: auto;
+    width: 500px;
     height: auto;
     float: left;
     margin-left: auto;
@@ -140,4 +140,17 @@ body.signed-out-body {
     border-radius: 10px;
     box-shadow: 2px 2px 3px #888888;
     font-family: Optima;
+}
+.resume h2 {
+    font-size: 16;
+    text-align: center;
+
+}
+.resume h3 {
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+.profile_info {
+    text-align: center;
 }

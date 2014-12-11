@@ -5,16 +5,18 @@
 		<h3>Shows:</h3>
 		<ul class="unstyled">
 			<li ng-repeat="experience in user.experiences">
-				{{ experience.title }}, {{ experience.year }}
+				{{ experience.year }}, {{ experience.title }}
 			</li>
 		</ul>
-
-		<label>Show Title:</label>
-		<input ng-model="newExperienceTitle">
+		<a href ng-click="visible = !visible"> add a Show</a>
+		<div ng-show="visible" ng-class="ng-hide">
 		<label>Year</label>
 		<input ng-model="newExperienceYear">
+		<label>Show Title:</label>
+		<input ng-model="newExperienceTitle">
 		<label>Category</label>
 		<input ng-model="newExperienceCategory">
 		<button ng-click="addExperience(newExperienceTitle, newExperienceYear, newExperienceCategory)">Add Show</button>
 	</div>
+</div>
 </div>
