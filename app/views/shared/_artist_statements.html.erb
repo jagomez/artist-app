@@ -11,23 +11,22 @@
 			<div class="panel panel-default">
 				<table class="table table-bordered table-hover table-striped" ng-repeat="statement in user.statements">
 					<tr>
-					<td> Description</td>
+					<td> Title</td>
 					<td> Statement</td>
 					</tr>
-					
 					<tr>
-						<td> {{statement.description}}</td>
-						<td> {{statement.statement}}<td>
+						<td>{{statement.description}}</td>
+						<td>{{statement.statement}}<td>
 					</tr>
 				</table>
-				<h3>Add an Artist Statement</h3>
-		
-		<label>Description</label>
-		<input ng-model="newArtistStatementDescription">
-		<label>Statement</label>
-		<input ng-model="newArtistStatementStatement">
-		<button ng-click="addArtistStatement(newArtistStatementDescription, newArtistStatementStatement)">Add statement</button>
-
+			</div>
+			<a href ng-click="visible = !visible"> add a new Statement</a>
+			<div ng-show="visible" ng-class="ng-hide">
+			<label>Description</label>
+			<input ng-model="newArtistStatementDescription">
+			<label>Statement</label>
+			<input ng-model="newArtistStatementStatement">
+			<button ng-click="addArtistStatement(newArtistStatementDescription, newArtistStatementStatement)">Add statement</button>
 			</div>
 		</div>
 	</div>
