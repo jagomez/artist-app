@@ -25,6 +25,7 @@ Rails.application.routes.draw do
       resources :users
       resources :experiences
       resources :educations
+      resources :artist_statements
       resources :deadlines
       resources :opportunities
       resources :images

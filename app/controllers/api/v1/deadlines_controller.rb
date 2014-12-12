@@ -1,6 +1,6 @@
  class Api::V1::DeadlinesController < ApplicationController
  	def create
-		@deadline= deadline.create(deadline_params)
+		@deadline= Deadline.create(deadline_params)
 	end
 	
 	def deadline_params

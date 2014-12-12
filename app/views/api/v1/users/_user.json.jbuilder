@@ -19,7 +19,8 @@ json.experiences user.experiences.each do |experience|
 	json.category experience.category
 end
 json.images user.images.each do |image|
-	json.image image.image
+	json.id image.id
+	json.image image.image.url
 	json.title image.title
 	json.medium image.medium
 	json.year image.year

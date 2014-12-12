@@ -1,8 +1,8 @@
 class Api::V1::ArtistStatementsController < ApplicationController
 	def create
-		@artist_statement= artist_statement.create(statement_params)
+		@artist_statement = ArtistStatement.create(artist_statement_params)
 	end
-	def statement_params
+	def artist_statement_params
 		return params.require(:statement).permit(:description, :statement, :user_id)
 	end
 	def restrict_access

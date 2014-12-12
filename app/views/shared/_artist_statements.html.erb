@@ -19,9 +19,14 @@
 						<td> {{statement.description}}</td>
 						<td> {{statement.statement}}<td>
 					</tr>
-					
-
 				</table>
+				<h3>Add an Artist Statement</h3>
+		
+		<label>Description</label>
+		<input ng-model="newArtistStatementDescription">
+		<label>Statement</label>
+		<input ng-model="newArtistStatementStatement">
+		<button ng-click="addArtistStatement(newArtistStatementDescription, newArtistStatementStatement)">Add statement</button>
 
 			</div>
 		</div>
