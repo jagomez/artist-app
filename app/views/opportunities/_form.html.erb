@@ -1,0 +1,12 @@
+<div class="page-container">
+	<h1>Create a new Opportunity</h1>
+<%= simple_form_for @opportunity do |f| %>
+  <%= f.input :projectname %>
+  <%= f.input :project_scope%>
+  <%= f.input :fee%>
+  <%= f.input :prereq%>
+  <%= f.input :deadline%>
+  <%= f.button :submit %>
+<% end %>
+
+</div>

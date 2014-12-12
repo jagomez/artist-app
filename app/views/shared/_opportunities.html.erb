@@ -8,8 +8,8 @@
 			<div class="panel panel-default" ng-repeat="opportunity in user.opportunities" >
 				<table class="table table-bordered table-hover table-striped" >
 			<tr >
-				<td> Deadline</td>
-				<td> Title</td>
+				<td>Deadline</td>
+				<td>Title</td>
 				<td>Fee</td>
 				
 			</tr >
@@ -19,11 +19,11 @@
 				<td>$ {{opportunity.fee}}</td>				
 			</tr>
 			</table>
-			<div ng-repeat="deadline in opportunity.deadlines" >
+			<div class="panel panel-default" ng-repeat="deadline in opportunity.deadlines" >
 
-			<table class ="table" >
+			<table class="table table-bordered table-hover table-striped"  >
 				<tr>
-					<td colspan="3" class="panel-title"> Need to do</td>
+					<td colspan="3" > Need to do</td>
 				</tr>
 				
 				<tr>
@@ -39,13 +39,15 @@
 
 			<table class = "table" ng-show="visible" ng-class="ng-hide">
 				<tr>
-					<td><label>Date</label><input></td>
-					<td><label>Name</label></td>
-					<td><label>Describe what you have to do</label</td>
+					<td><label>Date</label><input ng-model="newDeadlineDate"></td>
+					<td><label>Name</label><input ng-model="newDeadlineName"></td></td>
+					<td><label>Description</label><input ng-model="newDeadlineDescription"><br>
+					<button ng-click="addDeadline (newDeadlineDate, newDeadlineName, newDeadlineDescription)">Add Deadline</button></td></td>
+					
 				</tr>
 			</table>
 			</div>
-
+<%= render "form" %>
 			</div>
 </div>
 

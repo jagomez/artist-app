@@ -4,7 +4,7 @@
 	end
 	
 	def deadline_params
-		return params.require(:deadline).permit( :name, :description, :date, :status, :opportunity_id, :user_id)
+		return params.require(:deadline).permit( :date, :name, :description, :status, :opportunity_id, :user_id)
 	end
 	def restrict_access
 		authenticate_or_request_with_http_token do |api_key, options|

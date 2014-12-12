@@ -8,7 +8,7 @@ class OpportunitiesController < ApplicationController
 	end
 	
 	def show
-		@opportunity = Opportunity.find_by(:id=>params[:id])
+		@opportunity = current_user.opportunities.new(opportunity_params)
 	end
 
 	def create
@@ -24,7 +24,7 @@ class OpportunitiesController < ApplicationController
 
 	private
 	def opportunity_params
-		return params.require(:opportunity).permit(:projectname, :project_scope, :deadline)	
+		# return params.require(:opportunity).permit(:projectname, :project_scope, :deadline)	
 	end
 	
 
