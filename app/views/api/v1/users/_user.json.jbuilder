@@ -46,8 +46,12 @@ json.opportunities user.opportunities.each do |opportunity|
 	json.entity_email opportunity.entity_email
 	json.url opportunity.url
 	json.deadlines opportunity.deadlines.each do |deadline|
+		json.id deadline.id
 		json.name deadline.name
+		json.user_id deadline.user_id
+		json.description deadline.description
 		json.date deadline.date
 		json.active deadline.active
 	end
+
 end

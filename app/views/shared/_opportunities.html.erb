@@ -18,21 +18,22 @@
 				<td>{{opportunity.opportunity}} <br> <a href="{{opportunity.url}}">url</a></td>
 				<td>$ {{opportunity.fee}}</td>				
 			</tr>
-			
 			</table>
 			<div ng-repeat="deadline in opportunity.deadlines" >
 
 			<table class ="table" >
 				<tr>
-					<td colspan="2" class="panel-title"><i class = "fa fa-arrow-circle-right"> Need to do</td>
+					<td colspan="3" class="panel-title"><i class = "fa fa-arrow-circle-right"> Need to do</td>
 				</tr>
 				
 				<tr>
 					<td>{{ deadline.name }}</td>
+					<td>{{ deadline.description}}</td>
 					<td>{{ deadline.date }}</td>
 				</tr>
 			</table>
 			</div>
+
 			</div>
 </div>
 
