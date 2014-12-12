@@ -23,13 +23,25 @@
 
 			<table class ="table" >
 				<tr>
-					<td colspan="3" class="panel-title"><i class = "fa fa-arrow-circle-right"> Need to do</td>
+					<td colspan="3" class="panel-title"> Need to do</td>
 				</tr>
 				
 				<tr>
-					<td>{{ deadline.name }}</td>
-					<td>{{ deadline.description}}</td>
 					<td>{{ deadline.date }}</td>
+					<td>{{ deadline.name}}</td>
+					<td>{{ deadline.description }}</td>
+				</tr>
+				<tr>
+					<td colspan="3"><a href ng-click="visible = !visible"> add a new Deadline</a></td>
+				</tr>
+
+			</table>
+
+			<table class = "table" ng-show="visible" ng-class="ng-hide">
+				<tr>
+					<td><label>Date</label><input></td>
+					<td><label>Name</label></td>
+					<td><label>Describe what you have to do</label</td>
 				</tr>
 			</table>
 			</div>
