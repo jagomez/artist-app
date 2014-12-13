@@ -1,20 +1,29 @@
 <div ng-app="app">
-<div ng-controller="artistsCtrl">
+<div ng-controller="artistsCtrl" >
 		<div ng-init="getUserInfo(<%= current_user.id %>)" ></div>
 		<!-- {{ 1 + 1 }} -->
-		<table class="table">
+		<div >
+			<table>
 			<tr>
-				<td class="panel-title" ng-repeat="opportunity in user.opportunities" ><i class = "fa fa-arrow-circle-right"> Need to do</td>
-			</tr> 
+					<th colspan="3" class="panel-title" ><i class = "fa fa-arrow-circle-right"> Things to Do</th>
+				</tr>
+			</table>
+		<table ng-repeat="opportunity in user.opportunities" class="table table-bordered table-hover table-striped"  >
 			<tr>
+				<td>{{opportunity.opportunity}}</td>
+			</tr>
+				
+			<tr ng-repeat="deadline in opportunity.deadlines">
+				
+				<td>{{ deadline.date}}</td>
 				<td >{{ deadline.name }}</td>
 				<td>{{ deadline.description }}</td>
-				<td>{{ deadline.date}}</td>
+				
 			</tr>
-		
+			
 		</table>
 
-		
+		</div>
 	</div>
 </div>
 

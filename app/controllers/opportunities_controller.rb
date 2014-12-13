@@ -4,7 +4,7 @@ class OpportunitiesController < ApplicationController
   		@opportunity = Opportunity.all
 	end
 	def new
-		@opportunity = Opportunity.new
+		@opportunity = current_user.opportunities.new
 	end
 	
 	def show

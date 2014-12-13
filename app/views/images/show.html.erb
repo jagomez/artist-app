@@ -1,4 +1,20 @@
-<div class="image-info">
-<img src = "<%= @image.title %>"/>
-<p><%= image_tag @image.image, :width => "400" %></p>
+<div ng-app="app">
+<div ng-controller="artistsCtrl">
+		<div ng-init="getUserInfo(<%= current_user.id %>)" ></div>
+	<div class = "image-container" ng-repeat="image in user.images"> 
+		
+		<img src="{{ image.image }}">
+		<div class="image-info">
+			<p>{{ image.title }} </p>
+			<p>{{image.description }}</p>
+			<p>{{image.year}}, {{image.size }}, {{image.medium}}</p>
+		</div>
+		<p><a href="">add a new image</a></p>
+	</div>
+
+
 </div>
+</div>
+
+
+
