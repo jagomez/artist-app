@@ -11,6 +11,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'carrierwave'
 gem "fog"
 gem 'dotenv-rails'
+gem 'prawn'
 group :development, :test do
 	gem 'rspec-rails', '~> 3.0.0'
 end
