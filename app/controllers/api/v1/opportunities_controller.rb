@@ -1,6 +1,6 @@
  class Api::V1::OpportunitiesController < ApplicationController
  	def create
-		@opportunity= opportunity.create(opportunity_params)
+		@opportunity= Opportunity.create(opportunity_params)
 	end
 
 	def opportunity_params

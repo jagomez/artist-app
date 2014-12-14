@@ -1,3 +1,4 @@
+
 <div ng-app="app">
 	<div ng-controller="artistsCtrl">
 		<div class="col-lg-5">
@@ -11,12 +12,14 @@
 					<tr >
 						<td>Deadline</td>
 						<td>Title</td>
+						<td>Gallery</td>
 						<td>Fee</td>
 						
 					</tr >
 					<tr >
 						<td>{{opportunity.deadline}}</td>
 						<td>{{opportunity.opportunity}} <br> <a href="{{opportunity.url}}">url</a></td>
+						<td>{{opportunity.entity_name}}</td>
 						<td>$ {{opportunity.fee}}</td>				
 					</tr>
 					</table>
@@ -48,8 +51,7 @@
 								</table>
 							</div>
 					</div>
+					<p><a href ="/opportunities/new">add an opportunities</a></p>
 		</div>	
 	</div>			
 </div>
-
-	

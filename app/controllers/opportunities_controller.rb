@@ -8,11 +8,11 @@ class OpportunitiesController < ApplicationController
 	end
 	
 	def show
-		@opportunity = current_user.opportunities.new(opportunity_params)
+		@opportunity = current_user.opportunities.new
 	end
 
 	def create
-		@opportunity = Opportunity.new(opportunity_params)
+		@opportunity = Opportunity.new
 		if @opportunity.save
 			
 			flash[:success] = "Call for Artist successfully added."

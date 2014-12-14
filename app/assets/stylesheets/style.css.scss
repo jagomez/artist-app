@@ -20,15 +20,18 @@ body.signed-out-body {
 @media(min-width:500px) {
     body {
         margin-top: 0px;
+        background-image: url("triangular.png");
     }
 }
 @media(min-width:500px) {
     #wrapper {
         padding-left: 225px;
+        background-image: url("triangular.png");
     }
 
     #page-wrapper {
         padding: 10px;
+        background-image: url("triangular.png");
     }
 }
 .top-nav>li>a {
@@ -158,6 +161,18 @@ body.signed-out-body {
 }
 .profile_info {
     text-align: center;
+}
+.profile img {
+
+    width: 100px;
+    height: 100px;
+    border: 1px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #ffffff;
+    float: left;
+    display: block;
+    margin: 20px;
 }
 
 input {
