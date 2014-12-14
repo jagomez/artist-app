@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141209212344) do
+ActiveRecord::Schema.define(version: 20141214154316) do
 
   create_table "applied_opps", force: true do |t|
     t.integer  "UserID"
@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(version: 20141209212344) do
     t.text     "entity_email"
     t.text     "url"
     t.integer  "user_id"
+    t.string   "status"
   end
 
   create_table "users", force: true do |t|

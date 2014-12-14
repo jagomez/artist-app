@@ -1,11 +1,11 @@
 <h1>Create a new Opportunity</h1>
 	<%= simple_form_for @opportunity do |f| %>
-		<%= f.input :projectname %>
-		<%= f.input :project_scope %>
+		<%= f.input :projectname, label: 'Project Name' %>
+		<%= f.input :project_scope, label: 'Project Scope', hint: 'can copy from original link' %>
 		<%= f.input :entity_name , label: 'Gallery or Host'  %>
 		<%= f.input :url, label: 'link to original post' %>
-		<%= f.input :fee%>
-		<%= f.input :prereq%>
-		<%= f.input :deadline%>
+		<%= f.input :fee, label: 'Submittal Fee $'%>
+		<%= f.input :prereq, label: 'what are they asking for?' %>
+		<%= f.input :deadline, label: 'Deadline to send submittal' %>
 	<%= f.button :submit %>
 	<% end %>
