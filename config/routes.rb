@@ -17,8 +17,8 @@ Rails.application.routes.draw do
   resources :deadlines
   resources :images
   resources :portfolios
-  resources :resumes
   resources :users
+  get "resume" => "resumes#show"
 
   namespace :api do
     namespace :v1 do
