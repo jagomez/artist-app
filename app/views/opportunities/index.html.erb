@@ -14,13 +14,15 @@
 						<td>Title</td>
 						<td>Gallery</td>
 						<td>Fee</td>
+						<td>view</td>
 						
 					</tr >
 					<tr >
 						<td>{{opportunity.deadline}}</td>
 						<td>{{opportunity.opportunity}} <br> <a href="{{opportunity.url}}">url</a></td>
 						<td>{{opportunity.entity_name}}</td>
-						<td>$ {{opportunity.fee}}</td>				
+						<td>$ {{opportunity.fee}}</td>	
+						<td><a href="/opportunities/{{opportunity.id}}">View</td>		
 					</tr>
 					</table>
 							<div class="panel panel-default" ng-repeat="deadline in opportunity.deadlines" >

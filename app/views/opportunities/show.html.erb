@@ -1,2 +1,27 @@
+<div ng-app="app">
+<div ng-controller="artistsCtrl">
+		<div ng-init="getUserInfo(<%= current_user.id %>)" ></div>
+	<div > 
+	
+		<table class="table table-bordered table-hover table-striped" >
+					<tr >
+						<td>Deadline</td>
+						<td>Title</td>
+						<td>Gallery</td>
+						<td>Fee</td>
+					
+						
+					</tr >
+					<tr >
+						<td><%= @opportunity.deadline %></td>
+						<td><%= @opportunity.projectname %><br> <a href="<%= @opportunity.url %>">url</a></td>
+						<td></td>
+						<td>$ </td>	
+								
+					</tr>
+					</table>
+	</div>
 
-	<%= render "shared/opportunities" %>
+
+</div>
+</div>

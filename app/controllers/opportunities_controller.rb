@@ -18,7 +18,8 @@ class OpportunitiesController < ApplicationController
 	end 
 
 	def show
-		@opportunity = current_user.opportunities.new
+		@opportunity = Opportunity.find_by(:id=>params[:id])
+
 	end 
 
 	

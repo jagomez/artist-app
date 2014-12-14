@@ -34,6 +34,7 @@ end
 
 
 json.opportunities user.opportunities.each do |opportunity|
+	json.id opportunity.id
 	json.opportunity opportunity.projectname
 	json.project_scope opportunity.project_scope
 	json.category opportunity.category
