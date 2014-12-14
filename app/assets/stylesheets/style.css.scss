@@ -1,6 +1,6 @@
 body {
     margin-top: 100px;
-    background-color: #ffffff;
+   
 }
 
 body.signed-out-body {
@@ -16,15 +16,17 @@ body.signed-out-body {
     float: left;
     border-style: solid;
     border-color: #BFEFFF;
+    background-color: #BFEFFF !important;
     border-radius: 10px;
 
 }
 
 .page-container {
     float: left;
-    margin-top: 50px;
+    margin-top: 60px;
     border-style: solid;
     border-color: #BFEFFF;
+    background-color: #ffffff !important;
     overflow-y: scroll;
  }
 @media(min-width:500px) {
