@@ -1,18 +1,13 @@
-class OpportunitiesController < ApplicationController
-	
+class OpportunitiesController < ApplicationController	
 	def index
   		@opportunity = Opportunity.all
+  		@opportunity = Opportunity.new
 	end
 	def new
-		@opportunity = current_user.opportunities.new
-	end
-	
-	def show
-		@opportunity = current_user.opportunities.new
-	end
-
-	def create
 		@opportunity = Opportunity.new
+	end
+	def create
+		@opportunity = current_user.opportunities.new(opportunity_params)
 		if @opportunity.save
 			
 			flash[:success] = "Call for Artist successfully added."
@@ -22,9 +17,14 @@ class OpportunitiesController < ApplicationController
 		end
 	end 
 
+	def show
+		@opportunity = current_user.opportunities.new
+	end 
+
+	
 	private
 	def opportunity_params
-		# return params.require(:opportunity).permit(:projectname, :project_scope, :deadline)	
+		return params.require(:opportunity).permit(:projectname, :project_scope, :deadline)	
 	end
 	
 
