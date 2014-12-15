@@ -15,7 +15,7 @@ class ResumePdf < Prawn::Document
     
     stroke
     	stroke_color "#000000"
-    	self.line_width = 0.5 
+    	self.line_width = 0.25 
     	self.cap_style = :round
     	stroke do
     		line [500, 570], [0, 570]
@@ -23,7 +23,8 @@ class ResumePdf < Prawn::Document
     	
 	
     move_down 25
-    text "Education:", :align => :left, :leading => 5, :styles => :bold
+    formatted_text [ :text => "Education:", :align => :left, :leading => 5, :styles => [:bold]
+    ]
     user.educations.each do |education|
     	education.school
     	education.degree
@@ -32,12 +33,12 @@ class ResumePdf < Prawn::Document
     end
 
     move_down 25
-    text "Past Shows:", :align => :left, :leading => 5
+    formatted_text [ :text => "Past Shows:", :align => :left, :leading => 5, :styles => [:bold]  ]
     user.experiences.each do |experience|
     	experience.year
     	experience.title
         text "#{experience.year}, #{experience.title}", :align => :left, :leading => 2
     end
-    
+
   end
 end
