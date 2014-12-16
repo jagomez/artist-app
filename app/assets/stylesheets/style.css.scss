@@ -13,7 +13,7 @@ body.signed-out-body {
     background-color: #ffffff;
 }
 .container-fluid {
-    float: left;
+    margin-top: 60px;
     border-style: solid;
     border-color: #BFEFFF;
     background-color: #BFEFFF !important;
@@ -22,8 +22,6 @@ body.signed-out-body {
 }
 
 .page-container {
-    float: left;
-    margin-top: 60px;
     border-style: solid;
     border-color: #BFEFFF;
     background-color: #ffffff !important;
