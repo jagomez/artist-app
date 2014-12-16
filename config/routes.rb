@@ -18,7 +18,9 @@ Rails.application.routes.draw do
   resources :images
   resources :portfolios
   resources :users
+  get 'submit' => 'submittals#submit'
   get "resume" => "resumes#show"
+
 
   namespace :api do
     namespace :v1 do
