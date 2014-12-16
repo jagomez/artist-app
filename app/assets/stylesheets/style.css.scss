@@ -1,3 +1,6 @@
+html body {
+  height: 100%;
+}
 body {
     margin-top: 100px;
    
@@ -13,19 +16,27 @@ body.signed-out-body {
     background-color: #ffffff;
 }
 .container-fluid {
-    margin-top: 60px;
+    min-height: 100% !important;
+    margin-top: 66px;
     border-style: solid;
     border-color: #BFEFFF;
     background-color: #BFEFFF !important;
     border-radius: 10px;
+    
 
 }
 
 .page-container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
     border-style: solid;
     border-color: #BFEFFF;
+    border-radius: 10px;
+    margin-left: 20px;
     background-color: #ffffff !important;
-    overflow-y: scroll;
+    overflow-y: hidden;
+
  }
 @media(min-width:500px) {
     body {
@@ -111,46 +122,7 @@ body.signed-out-body {
 .side-nav>li>ul>li>a:hover {
     color: #fff;
 }
-.image-container, .image-container-form {
-    width: 250px;
-    display: block;
-    float: left;
-    background-color: #FFFFFF;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #BFEFFF;
-    padding: 5px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 3px #888888;
-    margin: 10px;
 
-}
-.image-container-form {
-    float: right;
-}
-.image-container img {
-    width: 100px;
-    height: 150px;
-    display: block;
-    float: left;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-right: 10px;
-
-}
-
-.image-info {
-    padding-left: 5px;
-}
-.image-container p {
-    margin: 10px;
-}
-.unstyled {
-
- list-style: none;
-} 
 
 
 // .artist-nav {
