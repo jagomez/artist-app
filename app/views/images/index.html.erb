@@ -1,19 +1,14 @@
 <div ng-app="app">
-<div ng-controller="artistsCtrl">
+	<div ng-controller="artistsCtrl">
 		<div ng-init="getUserInfo(<%= current_user.id %>)" ></div>
-	<div ng-repeat="image in user.images"> 
-		<div class = "image-container">
-		<img src="{{ image.image }}" class ="img-responsive img-rounded">
-		<div >
-			<p>{{ image.title }} </p>
+			<div ng-repeat="image in user.images" class = "image-container"> 
+			<img src="{{ image.image }}" class ="img-responsive img-rounded">
+			<p>{{image.title }} </p>
 			<p>{{image.description }}</p>
-			<p>{{image.year}}, {{image.size }}, {{image.medium}}</p>
-		</div>
-		<p><a href="">add a new image</a></p>
-	</div>
-	</div>
 
-</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 
