@@ -1,27 +1,27 @@
-<div ng-app="app">
-<div ng-controller="artistsCtrl">
-		<div ng-init="getUserInfo(<%= current_user.id %>)" ></div>
-	<div > 
-	
-		<table class="table table-bordered table-hover table-striped" >
-					<tr >
-						<td>Deadline</td>
-						<td>Title</td>
-						<td>Gallery</td>
-						<td>Fee</td>
-					
-						
-					</tr >
-					<tr >
-						<td><%= @opportunity.deadline %></td>
-						<td><%= @opportunity.projectname %><br> <a href="<%= @opportunity.url %>">url</a></td>
-						
-						<td>$ </td>	
-								
-					</tr>
-					</table>
-	</div>
+<div class="page-container">
 
+  <h2>Call for Artists</h2>
+<table class="table table-bordered table-hover table-striped">
+  <tr>
+      <th>Deadline</th>
+      <th>Project Name</th>
+      <th>Project Scope</th>
+      <th>Fee</th>
+      <th>Prerequisite</th>
+    
+  </tr>
+ 
+    <tr>
+      <td><%= @opportunity.deadline %></a></td>
+      <td><%= @opportunity.projectname %></td>
+      <td><%= @opportunity.truncate opportunity.project_scope %></td>
+      <td><%= @opportunity.fee %></td>
+      <td><%= @opportunity.prereq %></td>
+        
+    </tr>
 
-</div>
+</table>
+  <div class="text-right">
+    <a href="<%= new_opportunity_path %>">Add a new Opportunity <i class="fa fa-arrow-circle-right"></i></a>
+  </div>
 </div>

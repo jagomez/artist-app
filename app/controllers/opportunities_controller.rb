@@ -19,7 +19,6 @@ class OpportunitiesController < ApplicationController
 
 	def show
 		@opportunity = Opportunity.find_by(:id=>params[:id])
-
 	end 
 
 	
