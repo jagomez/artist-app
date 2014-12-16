@@ -1,10 +1,10 @@
 <div ng-app="app">
 <div ng-controller="artistsCtrl">
 		<div ng-init="getUserInfo(<%= current_user.id %>)" ></div>
-	<div class = "image-container" ng-repeat="image in user.images"> 
+	<div ng-repeat="image in user.images"> 
 		
-		<img src="{{ image.image }}">
-		<div class="image-info">
+		<img src="{{ image.image }}" class ="img-thunbnail">
+		<div >
 			<p>{{ image.title }} </p>
 			<p>{{image.description }}</p>
 			<p>{{image.year}}, {{image.size }}, {{image.medium}}</p>
