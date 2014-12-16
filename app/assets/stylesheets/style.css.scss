@@ -18,6 +18,7 @@ body.signed-out-body {
 .container-fluid {
     min-height: 100% !important;
     margin-top: 66px;
+    margin-left: 20px;
     border-style: solid;
     border-color: #BFEFFF;
     background-color: #BFEFFF !important;
@@ -33,9 +34,10 @@ body.signed-out-body {
     border-style: solid;
     border-color: #BFEFFF;
     border-radius: 10px;
-    margin-left: 20px;
+    min-height: 500px;
     background-color: #ffffff !important;
     overflow-y: hidden;
+    padding-left: 20px;
 
  }
 @media(min-width:500px) {
