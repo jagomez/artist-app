@@ -10,7 +10,7 @@
 			</table>
 		<table ng-repeat="opportunity in user.opportunities" class="table table-bordered table-hover table-striped"  >
 			<tr>
-				<td colspan="3"><a href ="/opportunities/show">{{opportunity.opportunity}}</a> due: {{opportunity.deadline}}</td>
+				<td colspan="3"><a href ="opportunities/{{opportunity.id}}">{{opportunity.opportunity}}</a> due: {{opportunity.deadline}}</td>
 			</tr>
 				
 			<tr ng-repeat="deadline in opportunity.deadlines">

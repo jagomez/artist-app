@@ -14,14 +14,12 @@
     <tr>
       <td><%= @opportunity.deadline %></a></td>
       <td><%= @opportunity.projectname %></td>
-      <td><%= @opportunity.truncate opportunity.project_scope %></td>
+      <td><%= @opportunity.project_scope %></td>
       <td><%= @opportunity.fee %></td>
       <td><%= @opportunity.prereq %></td>
         
     </tr>
+  </table>
 
-</table>
-  <div class="text-right">
-    <a href="<%= new_opportunity_path %>">Add a new Opportunity <i class="fa fa-arrow-circle-right"></i></a>
   </div>
 </div>

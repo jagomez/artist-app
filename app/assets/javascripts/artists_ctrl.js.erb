@@ -55,14 +55,14 @@
 		// }; 
 			
 
-			$scope.addDeadline= function(name, description, date, status) {
-		var newDeadline= { date: date, name: name, description: description, user_id: $scope.currentUserID, opportunity_id: $scope.currentOpportunityID };
+			$scope.addDeadline= function(date, name, description ) {
+		var newDeadline= { date: date, name: name, description: description, user_id: $scope.currentUserID};
 		$http.post('/api/v1/deadlines.json', {deadline: newDeadline}).then(function(response) {
 		}, function (error) {
 		$scope.error = error.statusText;
 		});
 			$scope.user.deadlines.push(newDeadline);
-			$scope.newDeadlinedate = "";
+			$scope.newDeadlineDate = "";
 			$scope.newDeadlineName = "";
 			$scope.newDeadlineDescription = "";
 			
