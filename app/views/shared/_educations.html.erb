@@ -5,19 +5,19 @@
 		<h3>Education:</h3>
 		<ul class="unstyled">
 			<li ng-repeat="education in user.educations">
-				{{ education.school }}, {{ education.year }}, {{ education.degree }}
+				{{ education.year }} - {{ education.school }}, {{ education.degree }}
 			</li>
 		</ul>
 
 		<a href ng-click="visible = !visible"> add education</a>
-		<div ng-show="visible" ng-class="ng-hide">
+		<div ng-show="visible" class="form-group" ng-class="ng-hide">
 		<label>School</label>
-		<input class="education" ng-model="newEducationSchool">
+		<input class="form-control" ng-model="newEducationSchool">
 		<label>Year</label>
-		<input ng-model="newEducationYear">
+		<input class="form-control" ng-model="newEducationYear">
 		<label>Degree</label>
-		<input ng-model="newEducationDegree">
-		<button ng-click="addEducation(newEducationSchool, newEducationYear, newEducationDegree)">Add a degree</button>
+		<input class="form-control" ng-model="newEducationDegree">
+		<button class="btn btn-default" ng-click="addEducation(newEducationSchool, newEducationYear, newEducationDegree)">Add a degree</button>
 		</div>
 	</div>
 </div>

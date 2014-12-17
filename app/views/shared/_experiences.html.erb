@@ -1,22 +1,23 @@
 <div ng-app="app">
-<div ng-controller="artistsCtrl">
-		<div ng-init="getUserInfo(<%= current_user.id %>) "></div>
-		<!-- {{ 1 + 1 }} -->
-		<h3>Shows:</h3>
-		<ul class="unstyled">
-			<li ng-repeat="experience in user.experiences">
-				{{ experience.year }}, {{ experience.title }}
-			</li>
-		</ul>
-		<a href ng-click="visible = !visible"> add a Show</a>
-		<div ng-show="visible" ng-class="ng-hide">
-		<label>Year</label>
-		<input ng-model="newExperienceYear">
-		<label>Show Title:</label>
-		<input ng-model="newExperienceTitle">
-		<label>Category</label>
-		<input ng-model="newExperienceCategory">
-		<button ng-click="addExperience(newExperienceTitle, newExperienceYear, newExperienceCategory)">Add Show</button>
+	<div ng-controller="artistsCtrl">
+			<div ng-init="getUserInfo(<%= current_user.id %>) "></div>
+			
+			<h3>Shows:</h3>
+			<ul class="unstyled">
+				<li ng-repeat="experience in user.experiences">
+					{{ experience.year }} - {{ experience.title }}
+				</li>
+			</ul>
+				<a href ng-click="visible = !visible"> add a Show</a>
+				<div ng-show="visible" class="form-group" ng-class="ng-hide">
+					<label>Year</label>
+					<input class="form-control" ng-model="newExperienceYear" >
+					<label>Show Title:</label>
+					<input class="form-control" ng-model="newExperienceTitle" >
+					<label>Category</label>
+					<input class="form-control" ng-model="newExperienceCategory" >
+					<button class="btn btn-default" ng-click="addExperience(newExperienceTitle, newExperienceYear, newExperienceCategory)">Add Show</button>
+				</div>
+			
 	</div>
-</div>
 </div>

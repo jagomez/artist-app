@@ -1,5 +1,4 @@
-
-	<div class="resume" ng-app="app">
+<div class="resume" ng-app="app">
 
 		<h2> <%= current_user.first_name %> <%= current_user.last_name %> </h2>
 		<div class ="profile_info">
@@ -7,21 +6,15 @@
 			<br>
 		<%= current_user.address %>, <%= current_user.city %> <%= current_user.state %> <br>
 		 <%= current_user.phone %></p>
-		 <div><a href="/">edit resume header</a>
-
-		 </div>
-	</div>
+			 <div><a href="/users/edit">edit resume header</a>
+			 </div>
+		</div>
 <%= render "shared/educations" %>
 
-<!-- div ng-app="app">
-	{{1+1}}
-	</div>
-
- -->
- <%= render "shared/experiences" %>
+<%= render "shared/experiences" %>
 </div>
 
-<div class = "row" colspan ="5" >
+<div class = "row" colspan ="5" id="right-link" >
 <a href ="/resume.pdf" target="_blank">	download resume pdf</a>
 
 </div>
