@@ -20,6 +20,12 @@ class OpportunitiesController < ApplicationController
 	def show
 		@opportunity = Opportunity.find_by(:id=>params[:id])
 	end 
+	def destroy
+	@opportunity = Opportunity.find_by(:id => params[:id])
+	@opportunity.destroy
+	flash[:success] = "You have successfully removed this call for artists"
+	redirect_to '/opportunities'
+	end
 
 	
 	private
