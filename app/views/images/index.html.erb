@@ -2,11 +2,11 @@
 	<div ng-controller="artistsCtrl">
 		<div ng-init="getUserInfo(<%= current_user.id %>)" ></div>
 			<div ng-repeat="image in user.images" class = "image-container"> 
-			<img src="{{ image.image }}" class ="img-responsive img-rounded">
+			<img src="{{ image.image }}" >
 			<p>{{image.title }} </p>
 			<p>{{image.description }}</p>
-
 			</div>
+			<p><a href="">add a new image</a></p>
 		</div>
 	</div>
 </div>

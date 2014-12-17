@@ -26,7 +26,12 @@ body.signed-out-body {
     
 
 }
-
+.ng-scope {
+  padding-top: 10px;
+}
+.panel {
+  margin: 10px;
+}
 .page-container {
     min-height: 100%;
     height: auto !important;
@@ -38,6 +43,7 @@ body.signed-out-body {
     background-color: #ffffff !important;
     overflow-y: hidden;
     padding-left: 20px;
+    margin-top: 10px;
 
  }
 @media(min-width:500px) {
@@ -218,7 +224,9 @@ label.collection_radio_buttons {
 .field_with_errors {
   background-color: #ff3333;
 }
-
+.form {
+  padding-top: 20px;
+}
 .simple_form .error {
   clear: left;
   color: black;
@@ -246,13 +254,19 @@ input.check_boxes {
   margin-left: 3px;
   vertical-align: -3px;
 }
-
+.btn-default {
+  margin-top: 10px !important;
+}
 label.collection_check_boxes {
   float: none;
   margin: 0;
   vertical-align: -2px;
   margin-left: 2px;
 }
-table {
+table-bordered {
+  padding-right: 20px !important;
+  width: 100% !important;
+}
+.table {
   width: 100%;
 }

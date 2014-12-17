@@ -1,5 +1,10 @@
-<h1>Create a new Opportunity</h1>
+<h3 class="panel-title"><i class="fa fa-arrow-circle-right"></i> Add a new Call for Artists</h3>
+
+<form role="form" class ="form">
+	<div class="form-group">
+
 	<%= simple_form_for @opportunity do |f| %>
+	
 		<%= f.input :projectname, label: 'Project Name' %>
 		<%= f.input :project_scope, label: 'Project Scope', hint: 'copy from original link' %>
 		<%= f.input :entity_name , label: 'Gallery or Host'  %>
@@ -7,5 +12,9 @@
 		<%= f.input :fee, label: 'Submittal Fee $'%>
 		<%= f.input :prereq, label: 'what are they asking for?' %>
 		<%= f.input :deadline, label: 'Deadline to send submittal' %>
-	<%= f.button :submit %>
-	<% end %>
+		<%= f.button :submit, class: "btn btn-default" %>
+		<% end %>
+
+	</div>
+
+</form>

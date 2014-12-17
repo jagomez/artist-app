@@ -4,15 +4,19 @@ class ArtistStatementsController < ApplicationController
 	end
 
 	def show
-	end
-
-	def destroy
+		@artist_statement = ArtistStatement.find_by(:id=>params[:id])
 	end
 
 	def update
 	end
 
 	def edit
+	end
+	def destroy
+		@artist_statement = ArtistStatement.find_by(:id => params[:id])
+		@artist_statement.destroy
+		flash[:success] = "You have successfully removed this artist statement"
+		redirect_to '/artist_statements'
 	end
 
 	private

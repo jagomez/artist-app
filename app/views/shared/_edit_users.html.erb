@@ -1,24 +1,43 @@
-<h3>Edit your profile</h3>
-<%= form_for @user do |f| %>
-<div class="form">
 
-<%= f.label :first_name %>
-<%= f.text_field :first_name %>
+<h3>Edit your Address</h3>
+<form role="form" class ="form">
+	<div class="form-group">
+		<%= form_for @user do |f| %>
+		<table class="table" >
+			<tr>
+				<td>
+			<%= f.label :first_name %>
+			<%= f.text_field :first_name %>
+				</td>
+				<td>
 
-<%= f.label :last_name %>
-<%= f.text_field :last_name %>
-
-<%= f.label :address %>
-<%= f.text_field :address %>
-
-<%= f.label :city %>
-<%= f.text_field :city %>
-
-<%= f.label :state, hint: "Abbreviate Please" %>
-<%= f.text_field :state %>
-
-</div>
-<div >
-<%= f.button :update, label: "Update"  %>
-</div>
-<% end %>
+			<%= f.label :last_name %>
+			<%= f.text_field :last_name %>
+				</td>
+				<td>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+			<%= f.label :address %>
+			<%= f.text_field :address %>
+				</td>
+				<td>
+			<%= f.label :city %>
+			<%= f.text_field :city %>
+				</td>
+				<td>
+			<%= f.label :state, hint: "Abbreviate Please" %>
+			<%= f.text_field :state %>
+				</td>
+				<tr>
+				<td colspan="3">
+			<%= f.button :update, label: "Update" , class: "btn btn-default" %>
+			<% end %>
+				</td>
+			</tr>
+			</table>
+		
+	</div>
+</form>

@@ -1,5 +1,6 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
+<div ng-app="app">
+<a href ng-click="visible = !visible"><h3 class="panel-title"><i class="fa fa-arrow-circle-right"></i> Edit User</h3></a>
+<div ng-show="visible" >
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
@@ -15,14 +16,20 @@
     <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
   </div>
 
+
   <div class="form-actions">
     <%= f.button :submit, "Update" %>
   </div>
 <% end %>
-
+</div>
+<a href ng-click="visible = !visible"><h3 class="panel-title"><i class="fa fa-arrow-circle-right"></i> Cancel my account</h3></a>
+<div ng-show="visible" >
 <h3>Cancel my account</h3>
 
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+</div>
+
 <%= render "shared/edit_users" %> 
+</div>

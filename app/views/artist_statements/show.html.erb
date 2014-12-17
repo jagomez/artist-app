@@ -1,4 +1,4 @@
-<div class="col-lg-5">
+<div>
 	<div ng-app="app">
 		<div ng-controller="artistsCtrl" >
 			<div ng-init="getUserInfo(<%= current_user.id %>)" >
@@ -10,22 +10,25 @@
 			<div class="panel panel-default">
 				<table class="table table-bordered table-hover table-striped" >
 					<tr>
-						<th> Title</th>
-						<th> Statement</th>
+						<th> Category</th>
+						<th colspan="2"> Statement</th>
+
 					</tr>
 					<tr ng-repeat="statement in user.statements" >
-						<td>{{statement.description}}</td>
+						<td><b>{{statement.description}}</b></td>
 						<td>{{statement.statement}}</td>
+						<td>update 
+							</td>
 					</tr>
 				</table>
 			</div>
 			<a href ng-click="visible = !visible"> add a new Statement</a>
-			<div ng-show="visible" ng-class="ng-hide">
-			<label>Description</label>
-			<input ng-model="newArtistStatementDescription">
+			<div ng-show="visible" class="form-group" ng-class="ng-hide">
+			<label>Category</label>
+			<input class="form-control" ng-model="newArtistStatementDescription">
 			<label>Statement</label>
-			<input ng-model="newArtistStatementStatement">
-			<button ng-click="addArtistStatement(newArtistStatementDescription, newArtistStatementStatement)">Add statement</button>
+			<input class="form-control" row="3" ng-model="newArtistStatementStatement">
+			<button class="btn btn-default" ng-click="addArtistStatement(newArtistStatementDescription, newArtistStatementStatement)">Add statement</button>
 			</div>
 		</div>
 	</div>
