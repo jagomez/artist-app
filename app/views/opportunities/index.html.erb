@@ -25,13 +25,13 @@
 						<td><a href="/opportunities/{{opportunity.id}}">View</td>		
 					</tr>
 					</table>
-							<div class="panel panel-default" ng-repeat="deadline in opportunity.deadlines" >
+							<div class="panel panel-default" >
 								<table class="table table-bordered table-hover table-striped"  >
 									<tr>
 										<td colspan="3" > Need to do</td>
 									</tr>
 									
-									<tr>
+									<tr ng-repeat="deadline in opportunity.deadlines">
 										<td>{{ deadline.date }}</td>
 										<td>{{ deadline.name}}</td>
 										<td>{{ deadline.description }}</td>
@@ -47,7 +47,7 @@
 										<td><label>Date</label><input ng-model="newDeadlineDate"></td>
 										<td><label>Name</label><input ng-model="newDeadlineName"></td></td>
 										<td><label>Description</label><input ng-model="newDeadlineDescription"><br>
-										<button ng-click="addDeadline (newDeadlineDate, newDeadlineName, newDeadlineDescription)">Add Deadline</button></td></td>
+										<button ng-click="addDeadline (opportunity, newDeadlineDate, newDeadlineName, newDeadlineDescription)">Add Deadline</button></td></td>
 										
 									</tr>
 								</table>

@@ -1,7 +1,7 @@
 <h1>Create a new Opportunity</h1>
 	<%= simple_form_for @opportunity do |f| %>
 		<%= f.input :projectname, label: 'Project Name' %>
-		<%= f.input :project_scope, label: 'Project Scope', hint: 'can copy from original link' %>
+		<%= f.input :project_scope, label: 'Project Scope', hint: 'copy from original link' %>
 		<%= f.input :entity_name , label: 'Gallery or Host'  %>
 		<%= f.input :url, label: 'link to original post' %>
 		<%= f.input :fee, label: 'Submittal Fee $'%>

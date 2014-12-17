@@ -225,6 +225,9 @@ label.collection_radio_buttons {
   display: block;
   margin-left: 120px;
 }
+.simple_form .input {
+  width: 100%;
+}
 
 .simple_form .hint {
   clear: left;
@@ -238,7 +241,7 @@ input.radio {
   margin-right: 5px;
   vertical-align: -3px;
 }
-
+input.text_boxes
 input.check_boxes {
   margin-left: 3px;
   vertical-align: -3px;
