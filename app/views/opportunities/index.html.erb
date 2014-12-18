@@ -5,7 +5,7 @@
 			<div ng-init="getUserInfo(<%= current_user.id %>)" >
 			</div>
 			<div class="panel-heading">
-			<h2 class="panel-title"><i class="fa fa-arrow-circle-right"></i>Opportunities to Apply for</h2>
+			<h2 class="panel-title"><i class="fa fa-arrow-circle-right"></i>Call for Artists</h2>
 			</div>
 					<div class="panel panel-default" ng-repeat="opportunity in user.opportunities" >
 						<table class="table table-bordered table-hover table-striped" >
@@ -14,7 +14,7 @@
 						<td>Title</td>
 						<td>Gallery</td>
 						<td>Fee</td>
-						<td>view</td>
+						<td>Submit - send an email</td>
 						
 					</tr >
 					<tr >
@@ -22,22 +22,25 @@
 						<td>{{opportunity.opportunity}} <br> <a href="{{opportunity.url}}">url</a></td>
 						<td>{{opportunity.entity_name}}</td>
 						<td>$ {{opportunity.fee}}</td>	
-						<td><a href="/opportunities/{{opportunity.id}}">View</td>		
+						<td><a href="/submit">{{opportunity.entity_email}}</td>		
 					</tr>
 					</table>
 							<div class="panel panel-default" >
 								<table class="table table-bordered table-hover table-striped"  >
 									<tr>
 										<td colspan="3" > Need to do</td>
+										<td > done!</td>
 									</tr>
 									
 									<tr ng-repeat="deadline in opportunity.deadlines">
 										<td>{{ deadline.date }}</td>
 										<td>{{ deadline.name}}</td>
 										<td>{{ deadline.description }}</td>
+										<td>{{ deadline.status}}</td>
 									</tr>
 									<tr>
 										<td colspan="3"><a href ng-click="visible = !visible"> add a new Deadline</a></td>
+										<td>radio</td>
 									</tr>
 
 								</table>
@@ -53,7 +56,7 @@
 								</table>
 							</div>
 					</div>
-					<p><a href ="/opportunities/new">Add an Opportunity</a></p>
+					<p><a href ="/opportunities/new">Add a new Call for Artists</a></p>
 		</div>	
 	</div>			
 </div>

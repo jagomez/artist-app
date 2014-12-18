@@ -1,4 +1,4 @@
-<div class="page-container">
+
 
   <h2>Call for Artists</h2>
 <table class="table table-bordered table-hover table-striped">
@@ -8,6 +8,7 @@
       <th>Project Scope</th>
       <th>Fee</th>
       <th>Prerequisite</th>
+      <th>Send to</th>
     
   </tr>
  
@@ -17,10 +18,10 @@
       <td><%= @opportunity.project_scope %></td>
       <td><%= @opportunity.fee %></td>
       <td><%= @opportunity.prereq %></td>
+      <td><%= @opportunity.entity_email %></td>
         
     </tr>
   </table>
+<%= render "shared/deadlines" %>
 
-  </div>
   <p><a data-confirm="really? are you sure?" data-method="delete" href="/opportunities/<%= @opportunity.id %>" rel="nofollow">Delete</a></p>
-</div>
