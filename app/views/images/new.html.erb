@@ -1,0 +1,25 @@
+<h3 class="panel-title"><i class="fa fa-arrow-circle-right"></i> Add a new image to your portfolio</h3>
+<div class="image-container-form">
+	<h1>Add a New Image</h1>
+		<%= simple_form_for @image do |f| %>
+			
+			<%= f.input :image %>
+
+			<%= f.label :title %>
+			<%= f.text_field :title %>
+
+			<%= f.label :medium %>
+			<%= f.text_field :medium %>
+
+			<%= f.label :year %>
+			<%= f.text_field :year %>
+
+			<%= f.label :description %>
+			<%= f.text_field :description %>
+
+			<%= f.label :size %>
+			<%= f.text_field :size %>
+
+		<%= f.button :submit %>
+		<% end %>
+</div>

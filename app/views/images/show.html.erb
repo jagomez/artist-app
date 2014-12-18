@@ -1,19 +1,16 @@
 <div ng-app="app">
-<div ng-controller="artistsCtrl">
+	<div ng-controller="artistsCtrl">
 		<div ng-init="getUserInfo(<%= current_user.id %>)" ></div>
-	<div ng-repeat="image in user.images"> 
-		
-		<img src="{{ image.image }}" class ="img-thunbnail">
-		<div >
+			<div ng-repeat="image in user.images" class = "image-container"> 
+			<img src="{{ image.image }}" >
 			<p>{{image.title }} </p>
-			<p>{{image.description }}</p>
-			<p>{{image.year}}, {{image.size }}, {{image.medium}}</p>
-		</div
-		
+			<p>{{image.size }}</p>
+			</div>
+			<div class = "row" colspan ="5" id="right-link" >
+				<p><a href="/images/new">add a new image</a></p>
+			</div>
+		</div>
 	</div>
-
-
-</div>
 </div>
 
 

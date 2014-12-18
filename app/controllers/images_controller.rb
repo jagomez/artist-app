@@ -4,7 +4,7 @@ class ImagesController < ApplicationController
   		@image = Image.new
 	end
 	def new
-		
+		@image = Image.new
 	end
 	def create
 		@image = current_user.images.new(image_params)
@@ -12,7 +12,7 @@ class ImagesController < ApplicationController
 			flash[:success] = "Image has been added."
 	    	redirect_to image_path(@image.id)
 		else
-		render 'new'
+		render 'index'
 		end
 	end 
 
